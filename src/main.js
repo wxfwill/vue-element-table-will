@@ -7,8 +7,8 @@ Vue.use(Pagination);
 Vue.use(Table);
 Vue.use(TableColumn);
 
-import vueElementTableWill from "../dist/vue-element-table-will.js";
-// import vueElementTableWill from "./lib/index.js";
+// import vueElementTableWill from "../dist/vue-element-table-will.js";
+import vueElementTableWill from "./lib/index.js";
 Vue.use(vueElementTableWill);
 
 new Vue({

@@ -119,40 +119,9 @@ export default {
       return Object.assign(
         {
           // 列表栏位
-          tableList: [
-            { prop: "title", label: "流程标题", width: 340 },
-            { prop: "nodeName", label: "任务名称" },
-            {
-              prop: "taskType",
-              label: "类型"
-            },
-            {
-              prop: "statusNote",
-              label: "状态"
-            },
-            { prop: "createTime", label: "任务创建时间" }
-          ],
+          tableList: [],
           // 列表数据
-          tableData: [
-            {
-              title: "测试1",
-              taskType: 1,
-              statusNote: 1,
-              createTime: "2020"
-            },
-            {
-              title: "测试1",
-              taskType: 1,
-              statusNote: 1,
-              createTime: "2020"
-            },
-            {
-              title: "测试1",
-              taskType: 1,
-              statusNote: 1,
-              createTime: "2020"
-            }
-          ],
+          tableData: [],
           // 操作
           operationList: [],
           // 操作栏按钮状态是否根据数据不同展示不同
@@ -173,7 +142,7 @@ export default {
             pageSize: 10
           },
           // 是否隐藏序号栏位
-          IsIndex: true,
+          IsIndex: false,
           //是否显示多选
           IsSelection: false,
           // 是否保留分页之前的数据
