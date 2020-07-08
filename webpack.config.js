@@ -1,16 +1,22 @@
 var path = require("path");
 var webpack = require("webpack");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 
 module.exports = {
-  entry: "./src/main.js",
-  // entry: "./src/lib/index.js",
+  // entry: "./src/main.js",
+  entry: "./src/lib/index.js",
   output: {
     path: path.resolve(__dirname, "./dist"),
     publicPath: "/dist/",
-    filename: "build.js",
-    // filename: "vue-element-table-will.js",
+    // filename: "build.js",
+    filename: "vue-element-table-will.js",
     libraryTarget: "umd",
     umdNamedDefine: true
+  },
+  externals: {
+    vue: "Vue",
+    "element-ui": "ELEMENT"
   },
   module: {
     rules: [
@@ -68,6 +74,7 @@ module.exports = {
     },
     extensions: ["*", ".js", ".vue", ".json"]
   },
+  plugins: [new BundleAnalyzerPlugin()],
   devServer: {
     historyApiFallback: true,
     noInfo: true,
